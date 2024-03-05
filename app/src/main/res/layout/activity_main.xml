@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@drawable/background">
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="228dp"
+            android:layout_height="164dp"
+            android:layout_marginTop="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/peso" />
+
+        <View
+            android:id="@+id/container"
+            style="@style/ContainerComponents"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <EditText
+        android:id="@+id/editTextName"
+        android:hint="Nome"
+        android:drawableRight="@drawable/ic_person"
+        android:inputType="textCapWords"
+        style="@style/Edit_text"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        app:layout_constraintStart_toStartOf="@id/container"
+        app:layout_constraintTop_toTopOf="@id/container"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        android:maxLength="25"/>
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:hint="Altura (m)"
+            style="@style/Edit_text"
+            android:drawableRight="@drawable/ic_height"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="@id/container"
+            app:layout_constraintStart_toStartOf="@id/container"
+            app:layout_constraintTop_toBottomOf="@id/editTextName"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:hint="Peso (Kg)"
+            android:drawableRight="@drawable/ic_weight"
+            android:inputType="numberDecimal"
+            style="@style/Edit_text"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="@id/container"
+            app:layout_constraintStart_toStartOf="@id/container"
+            app:layout_constraintTop_toBottomOf="@id/editTextHeight"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonCalc"
+                style="@style/Button_Calc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container"
+                android:text="@string/calcule_seu_imc"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

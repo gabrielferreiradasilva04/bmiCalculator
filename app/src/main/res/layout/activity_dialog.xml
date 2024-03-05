@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/resultTitle"
+        style="@style/Text_title"
+        android:layout_marginTop="28dp"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bmiText" />
+
+    <TextView
+        android:id="@+id/warningsText"
+        style="@style/Text_view"
+        android:layout_marginTop="40dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultTitle"
+        app:layout_constraintTop_toTopOf="@id/resultTitle" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:textSize="14dp"
+        android:textAllCaps="true"
+        style="@style/Text_view"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bmiText"
+        style="@style/Text_view"
+        android:layout_marginTop="32dp"
+        android:text=""
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nameText" />
+
+    <TextView
+        android:id="@+id/possibleRisks"
+        style="@style/Text_view"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warningsText" />
+
+    <TextView
+        android:id="@+id/recommendation"
+        style="@style/Text_view"
+        android:layout_marginTop="20dp"
+        android:text="Não se esqueça, sua saúde é algo sério. Cuide bem dela!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/possibleRisks" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BMICalc</string>
+    <string name="calcule_seu_imc">Calcule seu IMC</string>
+</resources>
